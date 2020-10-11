@@ -18,8 +18,8 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Background and Motivation](#Background_and_Motivation)
-  * [Summary Conclusion](#Summary_Conclusion)
+* [Background and Motivation](#Background and Motivation)
+  * [Summary Conclusion](#Summary Conclusion)
   * [Tools Used](#Tools_Used)
 * [Data and Model_Exploration](#Data_and_Model_Exploration)
   * [Initial Analysis](#Initial_Analysis)
