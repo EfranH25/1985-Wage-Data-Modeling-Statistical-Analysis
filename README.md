@@ -1,16 +1,3 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** EfranH25, repo_name, twitter_handle, email
--->
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <h3 align="center">1985 Wages and Sex Relationship Analysis</h3>
@@ -31,15 +18,14 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Background and Motivation](#Background and Motivation)
-  * [Summary Conclusion](#Summary Conclusion)
-  * [Tools Used](#Tools Used)
+* [Background_and_Motivation](#Background_and_Motivation)
+  * [Summary_Conclusion](#Summary_Conclusion)
+  * [Tools_Used](#Tools_Used)
 * [Data and Model Exploration](#Data and Model Exploration)
   * [Initial Analysis](#Initial Analysis)
   * [Initial Models](#Initial Models)
 * [Final Model](#Final Model)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 
 
