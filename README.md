@@ -18,12 +18,12 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Background_and_Motivation](#Background_and_Motivation)
+* [Background and Motivation](#Background_and_Motivation)
   * [Summary Conclusion](#Summary_Conclusion)
-  * [Tools_Used](#Tools_Used)
-* [Data_and_Model_Exploration](#Data_and_Model_Exploration)
-  * [Initial_Analysis](#Initial_Analysis)
-  * [Initial_Models](#Initial_Models)
+  * [Tools Used](#Tools_Used)
+* [Data and Model_Exploration](#Data_and_Model_Exploration)
+  * [Initial Analysis](#Initial_Analysis)
+  * [Initial Models](#Initial_Models)
 * [Final_Model](#Final_Model)
 * [Conclusion](#Conclusion)
 * [Contact](#contact)
