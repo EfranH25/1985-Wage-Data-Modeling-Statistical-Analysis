@@ -1,6 +1,6 @@
 ---
 title: "Stats Step 3"
-author: "Madelyn, Efran, Belle, Tiffany"
+author: "Efran"
 date: "3/10/2020"
 output: pdf_document
 ---
