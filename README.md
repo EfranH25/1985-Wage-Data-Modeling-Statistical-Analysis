@@ -25,6 +25,7 @@
   * [Initial_Analysis](#Initial_Analysis)
   * [Initial_Models](#Initial_Models)
 * [Final_Model](#Final_Model)
+* [Conclusion](#Conclusion)
 * [Contact](#contact)
 
 
@@ -105,6 +106,10 @@ With the transformation performed, the outlier removed, and an additional variab
 ![Final Regression Equation](https://raw.githubusercontent.com/EfranH25/Gender-Wage-Gap-1985/master/1985%20Wages%20and%20Sex%20Analysis%20Figures/Regression%20Model%20Equation.png)
 
 as the multilinear regression model for determining wage with an adjusted R-squared of 0.3067. 
+
+<!-- Conclusion -->
+## Conclusion
+Based on the data from the 1985 Current Population Survey, I found that sex is an important predictor variable in the model to predict wage. Using log transformations of the data to address a lack of normality, I was able to produce a final model for predicting wage that includes the predictor variables age, education, sex, union, and sector. In this model, sex has a negative coefficient meaning it will decrease predicted wage when the value of sex is one, which represents females. Therefore, it is likely that being a female could have a negative impact on wage. From the model, sex has the highest coefficient, not taking to account the sign, which suggests that the impact of an individual’s sex is highest than compared to other variables. The other predictor variables had a positive impact on wage which I have interpreted as such. Union status had the highest coefficient at .2037 which indicates to me the collective bargaining power of unions has a positive impact on workers being able to negotiate their pay. Sector had the second highest which could be an effect caused by different job sectors having different pay standards such as people in manufacturing making more than people in construction. Surprisingly, education had the third highest which highlights that education is important for getting a well-paying job, but other factors not encompassed by education can be more important. Also, it is important to note that during the 1980’s, individuals were more likely to acquire a well-paying job without higher education requirements as compared to modern times which could be another reason for the education variable being relatively lower. Finally, the positive coefficient of the age variable in the model indicates that seniority and wisdom gained over time positively impacts wage outcomes to some degree. Although these findings are interesting, I am unable to make sweeping general statements due to the limitations of the data and tests. These interpretations are inconclusive as they are based on the surface knowledge of the various factors that can impact wage. Further in-depth research needs to be conducted to come with more concrete interpretations of the findings. 
 
 <!-- CONTACT -->
 ## Contact
