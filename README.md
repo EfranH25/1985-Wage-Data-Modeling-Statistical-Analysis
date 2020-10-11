@@ -10,47 +10,18 @@
 *** EfranH25, repo_name, twitter_handle, email
 -->
 
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/EfranH25/Gender-Wage-Gap-1985">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">1985 Wages and Sex Relationship Analysis</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    This project analyzes wage data from the 1985 Current Population Survey to see what factors have the greatest impact on wage outcomes for individuals. In particular, this project examines whether gender is one of the main factors in wage outcomes.
     <br />
-    <a href="https://github.com/EfranH25/Gender-Wage-Gap-1985"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/EfranH25/Gender-Wage-Gap-1985"><strong>Explore the Repo »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/EfranH25/Gender-Wage-Gap-1985">View Demo</a>
-    ·
-    <a href="https://github.com/EfranH25/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/EfranH25/repo_name/issues">Request Feature</a>
+    <a href="https://drive.google.com/file/d/1o7xOckNXH_Ay-jqTiPslZ7wzCkazX2o1/view?usp=sharing">View Presentation</a>
   </p>
 </p>
 
@@ -59,7 +30,7 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
+* [TEST](#TEST)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
