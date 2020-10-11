@@ -21,10 +21,10 @@
 * [Background_and_Motivation](#Background_and_Motivation)
   * [Summary_Conclusion](#Summary_Conclusion)
   * [Tools_Used](#Tools_Used)
-* [Data and Model Exploration](#Data and Model Exploration)
-  * [Initial Analysis](#Initial Analysis)
-  * [Initial Models](#Initial Models)
-* [Final Model](#Final Model)
+* [Data_and_Model_Exploration](#Data_and_Model_Exploration)
+  * [Initial_Analysis](#Initial_Analysis)
+  * [Initial_Models](#Initial_Models)
+* [Final_Model](#Final_Model)
 * [Contact](#contact)
 
 
