@@ -1,4 +1,4 @@
-#This R Script produces all our initial plots created for our project during step 3
+#This R Script produces all initial plots created for project during step 3
 
 rm(list = ls())
 
