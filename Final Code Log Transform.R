@@ -1,4 +1,4 @@
-# This R Script Produces All Our Data/Results for our log transformed data and the tests for our final model
+# This R Script Produces All Data/Results for log transformed data and the tests for final model
 
 ## WageData2 is the wage data without the outlier; manually removed
 WageData2 = read.table(file="cps85wages-2.txt", header = TRUE)
