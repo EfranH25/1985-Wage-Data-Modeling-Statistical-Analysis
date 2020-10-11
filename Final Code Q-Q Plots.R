@@ -1,4 +1,4 @@
-#This R Script Produces all our Q-Q plots and test results for our Presentation 
+#This R Script Produces all Q-Q plots and test results for Presentation 
 
 #install.packages("ggpubr")
 #install.packages("dplyr")
