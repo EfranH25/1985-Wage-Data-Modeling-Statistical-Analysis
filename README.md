@@ -71,7 +71,7 @@ For the first step in the analysis, I plotted each one of the variables against 
 <a href="https://drive.google.com/file/d/1dbON5nKYln6U27bFxFyu3TqnAhGTI_Py/view?usp=sharing">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
 
-![TEST](https://drive.google.com/file/d/1dbON5nKYln6U27bFxFyu3TqnAhGTI_Py/view?usp=sharing)
+![TEST](https://raw.githubusercontent.com/EfranH25/Gender-Wage-Gap-1985/master/1985%20Wages%20and%20Sex%20Analysis%20Figures/Fig%201.png)
 
 ### Initial Models
 
