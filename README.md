@@ -18,20 +18,20 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Background and Motivation](#Background and Motivation)
-  * [Summary Conclusion](#Summary)
-  * [Tools Used](#Tools_Used)
-* [Data and Model_Exploration](#Data_and_Model_Exploration)
-  * [Initial Analysis](#Initial_Analysis)
-  * [Initial Models](#Initial_Models)
-* [Final_Model](#Final_Model)
+* [Background](#Background)
+  * [Summary](#Summary)
+  * [Tools](#Tools)
+* [Exploration](#Exploration)
+  * [Analysis](#Analysis)
+  * [Models](#Models)
+* [Results](#Results)
 * [Conclusion](#Conclusion)
 * [Contact](#contact)
 
 
 
-<!-- Background and Motivation -->
-## Background and Motivation
+<!-- Background -->
+## Background
 
 The “gender pay gap” is a controversial and highly debated topic in the United States. This raises the question amongst people: does sex really affect a person’s wage? The project’s goal is to determine how significantly sex impacts a person’s predicted wage, in 1985. Although, it is likely that the wage disparity between males and females has decreased since 1985, by studying this information institutions can gain insight that might help make future projections on how this issue may develop. An analysis of the gender pay gap will allow us to gain a better and informed understanding on how such an issue can be tackled and where solutions need to be applied.
 
@@ -40,16 +40,16 @@ In the project, I assessed the impact of sex on wages while taking into consider
 ### Summary
 Based on the data from the 1985 Current Population Survey, I found that sex is an important predictor variable in the model to predict wage. Using log transformations of the data to address a lack of normality, I was able to produce a final model for predicting wage that includes the predictor variables age, education, sex, union, and sector. In this model, sex has a negative coefficient meaning it will decrease predicted wage when the value of sex is one, which represents females. Therefore, it is likely that being a female could have a negative impact on wage. Although these findings are interesting, I am unable to make sweeping general statements due to the limitations of the data and tests. 
 
-### Tools Used
+### Tools
 * R Studio and Various R Packages
 * Google Slides
 
 
-<!-- Data Exploration -->
-## Data and Model Exploration
+<!-- Exploration -->
+## Exploration
 This section goes over how the information in the data set was explored.
 
-### Initial Analysis
+### Analysis
 For the first step in the analysis, I plotted each one of the variables against wage to gain an idea of the various distributions that were present within the data. I also produced various histograms for each of the predictor variables as well. Creating these plots gave me a general initial idea of the relationships between each one of the variables in relation to wage. They also gave me a rough sense of which variables had outliers that may be of concern for me later. Overall, from these initial plots I did not encounter any outstanding plots that may provide any interesting insights about the data other than that some relationship does exist between wage on the variables. With that said, none of the plots implied a strong linear relationship with wages, the highest R2 value of 0.1459 going to the age and wage plot, which indicated to me that it is likely a combination of variables would more strongly relate to wage than a single one. All the plots had some outlying variables, I interpreted many of these to be unique individuals whose circumstances impacted their wages much differently compared to their contemporaries. For extreme cases, I noted that the outlier may have to be removed when I create the final model because they most likely did not represent the general population at the time, such as someone being born into extreme wealth and easily acquiring a high wage job early in life. For example, in figure 1, the age against wage and experience against wage plots have an extreme outlier in the beginning where they have the highest wage with one of the lowest age and education.
 
 ![Figure 1](https://raw.githubusercontent.com/EfranH25/Gender-Wage-Gap-1985/master/1985%20Wages%20and%20Sex%20Analysis%20Figures/Fig%201.png)
@@ -74,7 +74,7 @@ Q-Q plots of each of the quantitative variables were examined as well, this was 
 
 To resolve the issue of nonnormality of wage, a log transformation on wage was applied which can be seen from the second Q-Q plot in the figure above. I noticed that this new plot showed much less of a skew, so I decided that a log transformation of the wage variable was something I would want to consider when carrying out further testing.
 
-### Initial Models
+### Models
 Another approach I utilized to analyze the data were BIC and AIC tests. This allowed me to test for every possible combination of predictor variable so that I may gain some insight on which variables had the highest predictive capacity for wages in the given data. After completing both tests, I found that all top scoring models in both the AIC and BIC results had sex and union status and some combination of education and experience. I interpreted this finding to mean, that sex and union had the strongest predictive capabilities for the data set in determining seeing what an individual’s wage would be.
 
 ![Table 1](https://raw.githubusercontent.com/EfranH25/Gender-Wage-Gap-1985/master/1985%20Wages%20and%20Sex%20Analysis%20Figures/Table%201.png)
@@ -95,8 +95,8 @@ In carrying out BIC testing, I used the same four sets of data as I did with adj
 
 Therefore, after testing with both adjusted R-Squared and BIC, I decided to remove the outlier from the dataset and do the log transformation on wage to uphold the normality assumption.
 
-<!-- Final Model -->
-## Final Model
+<!-- Results -->
+## Results
 With the outlier now removed, I wanted to see if the initial models (without outlier removed and no transformations) would still uphold. From the new BIC tests and adjusted R-Squared tests, it was determined that the sector variable could be added to the model. Though, I were not sure whether I should include an additional variable to the final model or not as it could make the model become overfit. I performed an ANOVA test at an alpha level of 0.05 between the two models: the initial model and the initial model with sector. The null hypothesis stated that the initial model without sector is a better performing model. The ANOVA test gave a p-value of 0.01175, thus I rejected the null hypothesis and stated that sector was a significant variable in the model.
 
 Due to the multicollinearity between age and experience, I had to decide which one of the two variables to omit from the final model. I computed the Variance Inflation Factor for two different models, one that included age and another that included experience. The VIF values for the model that contained age were overall lower and had values closer to one when in comparison to the model that contained experience. Therefore, I decided to include age over experience in the final model. 
