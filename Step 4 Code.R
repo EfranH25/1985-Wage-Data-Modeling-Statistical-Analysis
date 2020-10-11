@@ -1,4 +1,4 @@
-# This R Script Produces All Our BIC,AIC, and Cross-Validation Results for our Step 4
+# This R Script Produces All  BIC,AIC, and Cross-Validation Results for Step 4
 
 #install.packages("leaps")
 #install.packages("tidyverse")
