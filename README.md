@@ -19,7 +19,7 @@
 ## Table of Contents
 
 * [Background and Motivation](#Background and Motivation)
-  * [Summary Conclusion](#Summary Conclusion)
+  * [Summary Conclusion](#Summary)
   * [Tools Used](#Tools_Used)
 * [Data and Model_Exploration](#Data_and_Model_Exploration)
   * [Initial Analysis](#Initial_Analysis)
@@ -37,7 +37,7 @@ The “gender pay gap” is a controversial and highly debated topic in the Unit
 
 In the project, I assessed the impact of sex on wages while taking into consideration other confounding variables. The data is collected by the 1985 Current Population Survey and contains 11 variables. The four quantitative variables in the data set are level of education, number of years of experience, age, and wage. The remaining seven qualitative variables included in the data are sex, whether they live in the south, if they are in a union, race, occupation, sector, and marital status. Using a multitude of analytical tests, I wanted to determine whether each of these variables has a significant effect on wage. I analyzed the distribution among each variable, looked at adjusted residuals, and estimated AIC and BIC to determine the importance of each predictor variable. These methods allowed me to create a regression model for predicting wage, including only the variables I deemed important. 
 
-### Summary Conclusion
+### Summary
 Based on the data from the 1985 Current Population Survey, I found that sex is an important predictor variable in the model to predict wage. Using log transformations of the data to address a lack of normality, I was able to produce a final model for predicting wage that includes the predictor variables age, education, sex, union, and sector. In this model, sex has a negative coefficient meaning it will decrease predicted wage when the value of sex is one, which represents females. Therefore, it is likely that being a female could have a negative impact on wage. Although these findings are interesting, I am unable to make sweeping general statements due to the limitations of the data and tests. 
 
 ### Tools Used
