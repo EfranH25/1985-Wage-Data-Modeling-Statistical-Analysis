@@ -1,0 +1,196 @@
+---
+title: "Stats Step 3"
+author: "Efran"
+date: "3/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+|      For our project, we have ten different X variables to analyze against wage: education level, residence (north or south), sex, years of experience, union or nonunion, age, race, occupation, sector, and married or single. The graphs below as well as the generated regression models and correlations provide us much information about how these variables all interact with wage.
+
+|      First, we analyze wage versus education.
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod1 = lm(EDUCATION ~ WAGE)
+plot(EDUCATION, WAGE, cex=0.4, xlab= "", ylab= "")
+mtext(side=3, line=0.5, "EDUCATION and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "EDUCATION", cex = 0.6)
+mod1$coefficients
+cor(EDUCATION,WAGE)
+
+detach(WageData)
+```
+
+The regression model for this relation is $\hat{Y_i}=11.2648+0.1945X_i$ and the coefficient of correlation is $0.3819$. In this plot, we observe a direct relationship between the two variables; as one increases, the other does as well. We also observe that those with fewer years of education are less likely to receive an hourly wage. It seems that the density between 12 years of education to 16 years of education is the greatest compared to any other margin within the graph. There are a few outstanding outliers within the dataset; for example, there is a person with 14 years of education who received an hourly wage of $44.50.
+
+|      Next, we will observe the relation between area of residence (either North or South) and wages.
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide', fig.show='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod2 = lm(SOUTH ~ WAGE)
+plot(SOUTH, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "SOUTH and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "SOUTH", cex = 0.6)
+mod2$coefficients
+cor(SOUTH,WAGE)
+
+detach(WageData)
+```
+
+
+|      The graph below illustrates the relation between sex and wages.
+```{r, fig.align="center", fig.height=2.5, fig.width=3, echo=FALSE, results='hide', fig.show='hold', out.width='50%'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod3 = lm(SEX ~ WAGE)
+plot(SEX, WAGE, xlab= "", ylab= "", cex=0.4, cex.axis=0.6)
+mtext(side=3, line=0.5, "SEX and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "SEX", cex = 0.6)
+mod3$coefficients
+hist(SEX, xlab="", ylab="", main="", cex.axis=0.6)
+mtext(side=3, line=0.5, "SEX Histogram", cex = 0.8)
+mtext(side=1, line=2, "SEX", cex = 0.6)
+cor(SEX,WAGE)
+
+detach(WageData)
+```
+This plot shows the relation between gender and wage, where zero represents males, and one represents females. As can be seen in the plot, there is an outlier which shows a female earning a much higher wage than any other person in the sample. However, we can also see that there is a lower number of higher wage earners in the female population than in the male population. This demonstrates that the gender of a person may affect the wage he or she earns. Though it is difficult to see a linear relation here because there are only two possible x-values, the generated regression model is: $\hat{Y_i}=0.6387-0.0199X_i$, and the correlation coefficient is $-0.2054$.
+
+|      The next variable we will examine is years of experience.
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod4 = lm(EXPERIENCE ~ WAGE)
+plot(EXPERIENCE, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "EXPERIENCE and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "EXPERIENCE", cex = 0.6)
+hist(EXPERIENCE)
+mod4$coefficients
+cor(EXPERIENCE,WAGE)
+
+detach(WageData)
+```
+With this graph, it is easier to see a relationship between the two variables than in the previous plot. It appears that it may be linear; however, the correlation coefficient is only $0.0871$, which does not demonstrate much of a relation between the variables. The regression model can be illustrated by the following equation: $\hat{Y_i}=15.9296+0.2097X_i$.
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide', fig.show='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod5 = lm(UNION ~ WAGE)
+plot(UNION, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "UNION and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "UNION", cex = 0.6)
+mod5$coefficients
+cor(UNION,WAGE)
+
+detach(WageData)
+```
+|      The union vs wage plot (not pictured) has a regression model of $\hat{Y_i}=0.0706+0.0121X_i$ and a correlation coefficient of $0.1618$. In the plot, the union variable is represented by ones and zeros; ones representing participation in a union and zeros representing those who are not in a union. This sample involves more nonunionized employees than unionized. The plot also shows that those who are unionized fall in a lower margin of wage. The one apparent outlier in this sample receives an hourly wage of $44.50, and this person is nonunionized. This likely means that the status of a person’s union membership does not determine the wage he or she earns.
+
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod6 = lm(AGE ~ WAGE)
+plot(AGE, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "AGE and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "AGE", cex = 0.6)
+mod6$coefficients
+cor(AGE,WAGE)
+
+detach(WageData)
+```
+
+
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod7 = lm(RACE ~ WAGE)
+plot(RACE, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "RACE and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "RACE", cex = 0.6)
+mod7$coefficients
+cor(RACE,WAGE)
+
+detach(WageData)
+```
+
+
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod8 = lm(OCCUPATION ~ WAGE)
+plot(OCCUPATION, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "OCCUPATION and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "OCCUPATION", cex = 0.6)
+mod8$coefficients
+cor(OCCUPATION,WAGE)
+
+detach(WageData)
+```
+
+
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide', fig.show='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod9 = lm(SECTOR ~ WAGE)
+plot(SECTOR, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "SECTOR and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "SECTOR", cex = 0.6)
+mod9$coefficients
+cor(SECTOR,WAGE)
+
+detach(WageData)
+```
+
+
+
+```{r, fig.align="center", fig.height=2.5, fig.width=4, echo=FALSE, results='hide', fig.show='hide'}
+WageData = read.table(file="cps85wages.txt", header = TRUE)
+attach(WageData)
+
+par(mar=c(3.7,3,3,2))
+mod10 = lm(MARR ~ WAGE)
+plot(MARR, WAGE, xlab= "", ylab= "", cex=0.4)
+mtext(side=3, line=0.5, "MARRIAGE and WAGE Plot", cex = 0.8)
+mtext(side=2, line=2, "WAGE", cex = 0.6)
+mtext(side=1, line=2, "MARRIAGE", cex = 0.6)
+mod10$coefficients
+cor(MARR,WAGE)
+
+detach(WageData)
+```
