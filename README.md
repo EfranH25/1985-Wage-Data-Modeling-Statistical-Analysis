@@ -1,7 +1,9 @@
 <br />
 <p align="center">
   <h3 align="center">1985 Wages and Sex Relationship Analysis</h3>
-
+  <p align="center">
+    <img width="400" height="180" src="https://github.com/EfranH25/Gender-Wage-Gap-1985/blob/master/logo.png">
+</p>
   <p align="center">
     This project analyzes wage data from the 1985 Current Population Survey to see what factors have the greatest impact on wage outcomes for individuals. In particular, this project examines whether gender is one of the main factors in wage outcomes.
     <br />
