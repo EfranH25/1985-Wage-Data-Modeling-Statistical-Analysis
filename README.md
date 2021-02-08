@@ -1,3 +1,5 @@
+# 1985 Wage Data Modeling & Statistical Analysis
+
 <br />
 <p align="center">
   <h3 align="center">1985 Wages and Sex Relationship Analysis</h3>
