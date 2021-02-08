@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-  <h3 align="center">1985 Wages and Sex Relationship Analysis</h3>
+  <h3 align="center">1985 Wage Data Modeling & Statistical Analysis</h3>
   <p align="center">
     <img width="400" height="180" src="https://github.com/EfranH25/Gender-Wage-Gap-1985/blob/master/logo.png">
 </p>
